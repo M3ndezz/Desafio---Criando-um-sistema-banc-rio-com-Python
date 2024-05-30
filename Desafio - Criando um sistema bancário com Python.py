@@ -47,11 +47,14 @@ while True:
 
     elif opcao == "3":
         print("\n==========Extrato==========")
-        for transacao in extrato:
-            tipo = transacao["tipo"]
-            valor = transacao["valor"]
-            print(f'\n{tipo}: R$ {valor:.2f}')
-        print(f"\nO seu saldo atual é R$ {saldo:.2f}")
+        if not extrato:
+            print("\nNão foram realizadas movimentações.")
+        else:
+            for transacao in extrato:
+                tipo = transacao["tipo"]
+                valor = transacao["valor"]
+                print(f'\n{tipo}: R$ {valor:.2f}')
+                print(f"\nO seu saldo atual é R$ {saldo:.2f}")
         print("\n===========================")
 
     elif opcao == "4":
