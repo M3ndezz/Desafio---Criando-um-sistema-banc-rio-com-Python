@@ -5,7 +5,8 @@
 
 Atualizar a implementação do sistema bancário, para armazenar os dados de clientes em objetos ao invés de dicionários e pode usar de base do código [v2-Otimizando-o-sistema-bancário-com-funções-Python](https://github.com/M3ndezz/Sistema-bancario-com-Python-DIO/tree/main/v2-Otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-Python)
 O código deve serguir o modelo de classes UML a seguir:
-![baixados](https://academiapme-my.sharepoint.com/personal/renato_dio_me/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Frenato%5Fdio%5Fme%2FDocuments%2FDigital%20Innovation%20One%2Fslides%20aulas%20diversas%2FTrilhas%2FPython%20Developer%2FTrilha%20Python%20%2D%20desafio%2Epng&parent=%2Fpersonal%2Frenato%5Fdio%5Fme%2FDocuments%2FDigital%20Innovation%20One%2Fslides%20aulas%20diversas%2FTrilhas%2FPython%20Developer&ga=1)
+![55b4b17d-4a1b-48ab-9875-8d0b7138cab8](https://github.com/M3ndezz/Sistema-bancario-com-Python-DIO/assets/121885868/dfc728ec-ac55-48fb-8489-7e69bc3c674c)
+
 
 ## Mapeamento:
 
