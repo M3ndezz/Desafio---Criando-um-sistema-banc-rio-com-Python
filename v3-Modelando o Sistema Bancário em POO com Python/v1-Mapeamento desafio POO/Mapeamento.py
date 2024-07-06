@@ -1,5 +1,24 @@
 from abc import ABC, abstractmethod
 
+class Cliente:
+    def __init__(self, endereco):
+        self._endereco = endereco
+        self._contas = []
+
+    @staticmethod
+    def realizar_transacao(conta, transacao):
+        transacao.registrar(conta)
+
+    def adicionar_conta(self, conta):
+        self._contas.append(conta)
+
+class PessoaFisica(Cliente):
+    def __init__(self, endereco, cpf, nome, data_nascimento):
+        super().__init__(endereco)
+        self._cpf = cpf
+        self._nome = nome
+        self._data_nascimento = data_nascimento
+
 class Conta:
     def __init__(self, numero, cliente):
         self._saldo = 0
@@ -7,6 +26,8 @@ class Conta:
         self._agencia = "0001"
         self._cliente = cliente
         self._historico = Historico()
+        self.limite_saques = 0
+        self.limite = 500
 
     @property
     def saldo(self):
@@ -43,7 +64,7 @@ class Conta:
             print("Falha no depósito, tente novamente!")
             return False
 
-class ContaCorrente(Conta):
+class ContaCorrente(Conta, limite=500, limites=3):
     def __init__(self, cliente, numero):
         super().__init__(cliente, numero)
         self.limite = 500
@@ -85,21 +106,3 @@ class Saque(Transacao):
 
     def registrar(self):
         return "Saque - Valor: ***.**"
-
-class Cliente:
-    def __init__(self, endereco):
-        self._endereco = endereco
-        self._contas = []
-
-    def realizar_transacao(self, conta, transacao):
-        pass
-
-    def adicionar_conta(self, conta):
-        pass
-
-class PessoaFisica(Cliente):
-    def __init__(self, endereco, cpf, nome, data_nascimento):
-        super().__init__(endereco)
-        self._cpf = cpf
-        self._nome = nome
-        self._data_nascimento = data_nascimento
